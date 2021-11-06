@@ -13,7 +13,7 @@ function WorkElement({ description, img, link, GithubLink }) {
           </a>
           <span>
             <a href={GithubLink} target="_blank">
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </span>
         </div>

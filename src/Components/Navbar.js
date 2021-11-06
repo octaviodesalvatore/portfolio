@@ -9,16 +9,16 @@ function Navbar() {
           <p>octavio.</p>
         </Logo>
         <Nav>
-          <a href="#home-top" class="underlineRed">
+          <a href="#home-top" className="underlineRed">
             Home
           </a>
-          <a href="#about-me-section" class="underlineRed">
+          <a href="#about-me-section" className="underlineRed">
             About me
           </a>
-          <a href="##my-work" class="underlineRed">
+          <a href="##my-work" className="underlineRed">
             Projects
           </a>
-          <a href="#contact-me-section" class="contact-me">
+          <a href="#contact-me-section" className="contact-me">
             Contact Me
           </a>
         </Nav>

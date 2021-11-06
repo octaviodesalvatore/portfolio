@@ -11,25 +11,25 @@ function Footer() {
               href="https://www.linkedin.com/in/octaviodesalvatore/"
               target="_blank"
             >
-              <i class="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
             </a>
           </li>
 
           <li>
             <a href="https://twitter.com/okidesalvatore" target="_blank">
-              <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </a>
           </li>
 
           <li>
             <a href="https://github.com/octaviodesalvatore" target="_blank">
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </li>
 
           <li>
             <a href="https://www.twitch.tv/okitek1" target="_blank">
-              <i class="fab fa-twitch"></i>
+              <i className="fab fa-twitch"></i>
             </a>
           </li>
         </ul>

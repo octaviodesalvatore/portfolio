@@ -1,4 +1,5 @@
 import AboutMe from "./Components/AboutMe";
+import ContactMe from "./Components/ContactMe";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import MyWork from "./Components/MyWork";
@@ -13,6 +14,7 @@ function App() {
       <AboutMe />
       <Skills />
       <MyWork />
+      <ContactMe />
       <Footer />
     </div>
   );
