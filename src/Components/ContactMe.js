@@ -9,16 +9,36 @@ const userID = process.env.REACT_APP_USER_ID;
 
 function ContactMe() {
   const [toasty, setToasty] = useState();
-  const notify = (message) => toast(message);
+  const successMessage = (message) =>
+    toast.success(message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+  const errorMessage = (message) =>
+    toast.error(message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm("gmailMessage", templateID, e.target, userID).then(
       (result) => {
-        notify("Success");
+        successMessage("Success");
       },
       (error) => {
-        notify("Error");
+        errorMessage("Error");
       }
     );
     e.target.reset();
