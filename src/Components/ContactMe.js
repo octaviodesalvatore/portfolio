@@ -1,33 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const templateID = process.env.REACT_APP_TEMPLATE_ID;
 const userID = process.env.REACT_APP_USER_ID;
 
-const sendEmail = (e) => {
-  e.preventDefault();
-  emailjs.sendForm("gmailMessage", templateID, e.target, userID).then(
-    (result) => {
-      console.log(result.text);
-    },
-    (error) => {
-      console.log(error.text);
-    }
-  );
-  e.target.reset();
-};
-
 function ContactMe() {
+  const [toasty, setToasty] = useState();
+  const notify = (message) => toast(message);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm("gmailMessage", templateID, e.target, userID).then(
+      (result) => {
+        notify("Success");
+      },
+      (error) => {
+        notify("Error");
+      }
+    );
+    e.target.reset();
+  };
+
   return (
     <Wrapper>
+      <ToastContainer />
       <CenterContainer>
         <CvContainer>
           <a href="./docs/Octavio-De-Salvatore-CV.pdf" download="">
             <button>Descargar CV</button>
           </a>
         </CvContainer>
-
         <Content>
           <h2>Contáctame</h2>
           <ContactForm>
