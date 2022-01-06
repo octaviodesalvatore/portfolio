@@ -18,6 +18,7 @@ function SampleNextArrow(props) {
         borderRadius: "10px",
         width: "35px",
         height: "35px",
+        right: "25px",
       }}
       onClick={onClick}
     />
@@ -38,6 +39,7 @@ function SamplePrevArrow(props) {
         borderRadius: "10px",
         width: "35px",
         height: "35px",
+        left: "25px",
       }}
       onClick={onClick}
     />
@@ -45,7 +47,7 @@ function SamplePrevArrow(props) {
 }
 
 function Skills() {
-  const settings = {
+  let settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -65,7 +67,7 @@ function Skills() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -73,7 +75,7 @@ function Skills() {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 650,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

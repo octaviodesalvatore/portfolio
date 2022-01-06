@@ -10,8 +10,6 @@ function Navbar() {
     };
   }, []);
 
-  console.log(offset);
-
   return (
     <Container offset={offset}>
       <Wrapper>
