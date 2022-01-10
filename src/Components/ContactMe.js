@@ -61,19 +61,19 @@ function ContactMe() {
               <form onSubmit={sendEmail}>
                 <h3>Enviar un mensaje</h3>
                 <InputBox>
-                  <input type="text" name="name" />
+                  <input type="text" name="name" required="required" />
                   <span>Nombre completo</span>
                 </InputBox>
                 <InputBox>
-                  <input type="email" name="email" />
+                  <input type="email" name="email" required="required" />
                   <span>Email</span>
                 </InputBox>
                 <InputBox>
-                  <input type="text" name="subject" />
+                  <input type="text" name="subject" required="required" />
                   <span>Asunto</span>
                 </InputBox>
                 <InputBox>
-                  <textarea name="message" />
+                  <textarea name="message" required="required" />
                   <span>Escribe tu mensaje...</span>
                 </InputBox>
                 <Submit>
@@ -152,6 +152,7 @@ const ContactForm = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   h3 {
     font-size: 25px;
