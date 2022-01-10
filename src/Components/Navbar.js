@@ -17,44 +17,52 @@ function Navbar() {
           <p>octavio.</p>
         </Logo>
         <Nav>
-          <UnderlineRedA offset={offset}>
-            <Link to="Home" spy={true} smooth={true} offset={50} duration={50}>
-              Home
-            </Link>
-          </UnderlineRedA>
-          <UnderlineRedA offset={offset}>
-            <Link
-              to="AboutMe"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Sobre mí
-            </Link>
-          </UnderlineRedA>
-          <UnderlineRedA offset={offset}>
-            <Link
-              to="Projects"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Proyectos
-            </Link>
-          </UnderlineRedA>
-          <ContactMeA offset={offset}>
-            <Link
-              to="ContactMe"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Contáctame
-            </Link>
-          </ContactMeA>
+          <ul>
+            <UnderlineRedA offset={offset}>
+              <Link
+                to="Home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Home
+              </Link>
+            </UnderlineRedA>
+            <UnderlineRedA offset={offset}>
+              <Link
+                to="AboutMe"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Sobre mí
+              </Link>
+            </UnderlineRedA>
+            <UnderlineRedA offset={offset}>
+              <Link
+                to="Projects"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Proyectos
+              </Link>
+            </UnderlineRedA>
+            <ContactMeA offset={offset}>
+              <Link
+                to="ContactMe"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Contáctame
+              </Link>
+            </ContactMeA>
+          </ul>
         </Nav>
         <Hamburger open={open} onClick={() => setOpen(true)}>
           <div></div>
@@ -64,54 +72,56 @@ function Navbar() {
           <CloseHamburger open={open} onClick={() => setOpen(false)}>
             x
           </CloseHamburger>
-          <MobileLinks offset={offset}>
-            <Link
-              onClick={() => setOpen(false)}
-              to="Home"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Home
-            </Link>
-          </MobileLinks>
-          <MobileLinks offset={offset}>
-            <Link
-              onClick={() => setOpen(false)}
-              to="AboutMe"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Sobre mí
-            </Link>
-          </MobileLinks>
-          <MobileLinks offset={offset}>
-            <Link
-              onClick={() => setOpen(false)}
-              to="Projects"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Proyectos
-            </Link>
-          </MobileLinks>
-          <MobileLinks offset={offset}>
-            <Link
-              onClick={() => setOpen(false)}
-              to="ContactMe"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={50}
-            >
-              Contáctame
-            </Link>
-          </MobileLinks>
+          <ul>
+            <MobileLinks offset={offset}>
+              <Link
+                onClick={() => setOpen(false)}
+                to="Home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Home
+              </Link>
+            </MobileLinks>
+            <MobileLinks offset={offset}>
+              <Link
+                onClick={() => setOpen(false)}
+                to="AboutMe"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Sobre mí
+              </Link>
+            </MobileLinks>
+            <MobileLinks offset={offset}>
+              <Link
+                onClick={() => setOpen(false)}
+                to="Projects"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Proyectos
+              </Link>
+            </MobileLinks>
+            <MobileLinks offset={offset}>
+              <Link
+                onClick={() => setOpen(false)}
+                to="ContactMe"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={50}
+              >
+                Contáctame
+              </Link>
+            </MobileLinks>
+          </ul>
         </NavMobile>
       </Wrapper>
     </Container>
@@ -128,7 +138,7 @@ const CloseHamburger = styled.div`
   color: white;
 `;
 
-const MobileLinks = styled.a`
+const MobileLinks = styled.li`
   padding: 15px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: white;
@@ -136,6 +146,7 @@ const MobileLinks = styled.a`
 
   a {
     color: white;
+    cursor: pointer;
   }
 `;
 
@@ -232,6 +243,7 @@ const Logo = styled.div`
     font-weight: 700;
     font-family: "Caveat", cursive;
     font-size: 32px;
+    user-select: none;
   }
 `;
 
@@ -239,19 +251,27 @@ const Nav = styled.nav`
   @media (max-width: 768px) {
     display: none;
   }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
   a {
     margin-right: 10px;
     margin-left: 10px;
   }
 `;
 
-const ContactMeA = styled.a`
+const ContactMeA = styled.li`
   border: 2px solid #951717;
   padding: 8px 18px;
   border-radius: 20px;
   transition: all 250ms ease-in-out;
 
   a {
+    cursor: pointer;
     font-weight: 500;
     ${({ offset }) =>
       offset > 10 &&
@@ -266,20 +286,21 @@ const ContactMeA = styled.a`
   }
 `;
 
-const UnderlineRedA = styled.a`
+const UnderlineRedA = styled.li`
   position: relative;
   background-color: transparent;
   border-radius: 20px;
   transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
 
   a {
-    font-weight: 00;
+    font-weight: 500;
+    cursor: pointer;
     ${({ offset }) =>
       offset > 10 &&
       `
     color: white;
     
-  `}
+  `};
   }
 
   &::after {

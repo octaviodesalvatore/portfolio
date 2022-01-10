@@ -8,11 +8,11 @@ function WorkElement({ description, img, link, GithubLink }) {
       <figcaption className="hover-absolute-card">
         <h3>{description}</h3>
         <div className="SpanElementContainer">
-          <a href={link} target="”_blank”">
+          <a href={link} target="”_blank”" rel="noreferrer noopener">
             <span>Visiatar sitio web</span>
           </a>
           <span>
-            <a href={GithubLink} target="_blank">
+            <a href={GithubLink} target="_blank" rel="noreferrer noopener">
               <i className="fab fa-github"></i>
             </a>
           </span>

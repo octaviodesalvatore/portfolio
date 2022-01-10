@@ -10,25 +10,38 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/octaviodesalvatore/"
               target="_blank"
+              rel="noreferrer noopener"
             >
               <i className="fab fa-linkedin"></i>
             </a>
           </li>
 
           <li>
-            <a href="https://twitter.com/okidesalvatore" target="_blank">
+            <a
+              href="https://twitter.com/okidesalvatore"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="fab fa-twitter"></i>
             </a>
           </li>
 
           <li>
-            <a href="https://github.com/octaviodesalvatore" target="_blank">
+            <a
+              href="https://github.com/octaviodesalvatore"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="fab fa-github"></i>
             </a>
           </li>
 
           <li>
-            <a href="https://www.twitch.tv/okitek1" target="_blank">
+            <a
+              href="https://www.twitch.tv/okitek1"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="fab fa-twitch"></i>
             </a>
           </li>

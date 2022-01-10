@@ -32,10 +32,15 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   color: #ffffff;
-  width: 85%;
+  width: 50%;
   padding-bottom: 10rem;
   padding-top: 10rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+
   h3 {
     font-size: 32px;
     margin-bottom: 1.5rem;

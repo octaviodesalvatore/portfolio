@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,7 +9,7 @@ const templateID = process.env.REACT_APP_TEMPLATE_ID;
 const userID = process.env.REACT_APP_USER_ID;
 
 function ContactMe() {
-  const [toasty, setToasty] = useState();
+  // const [toasty, setToasty] = useState();
   const successMessage = (message) =>
     toast.success(message, {
       position: "top-right",
