@@ -35,10 +35,10 @@ function ContactMe() {
     e.preventDefault();
     emailjs.sendForm("gmailMessage", templateID, e.target, userID).then(
       (result) => {
-        successMessage("Success");
+        successMessage("Mensaje Enviado");
       },
       (error) => {
-        errorMessage("Error");
+        errorMessage("Error al enviar el mensaje");
       }
     );
     e.target.reset();
