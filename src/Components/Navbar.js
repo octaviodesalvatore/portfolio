@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 function Navbar() {
   const [offset, setOffset] = useState(0);
+
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset);
     };
   }, []);
+
+  console.log(open);
 
   return (
     <Container offset={offset}>
@@ -30,6 +35,27 @@ function Navbar() {
             Contact Me
           </ContactMeA>
         </Nav>
+        <Hamburger open={open} onClick={() => setOpen(true)}>
+          <div></div>
+        </Hamburger>
+
+        <NavMobile show={open}>
+          <CloseHamburger open={open} onClick={() => setOpen(false)}>
+            x
+          </CloseHamburger>
+          <MobileLinks offset={offset} href="#home-top">
+            Home
+          </MobileLinks>
+          <MobileLinks offset={offset} href="#about-me-section">
+            About me
+          </MobileLinks>
+          <MobileLinks offset={offset} href="##my-work">
+            Projects
+          </MobileLinks>
+          <MobileLinks offset={offset} href="#contact-me-section">
+            Contact Me
+          </MobileLinks>
+        </NavMobile>
       </Wrapper>
     </Container>
   );
@@ -37,20 +63,94 @@ function Navbar() {
 
 export default Navbar;
 
-const Container = styled.div`
-  width: 100%;
-  position: fixed;
-  z-index: 90;
-  transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
+const CloseHamburger = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+`;
 
-  ${({ offset }) =>
-    offset > 10 &&
-    `
+const MobileLinks = styled.a`
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: 600;
+`;
+
+const Hamburger = styled.span`
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 99;
+  right: 36px;
+  position: fixed;
+
+  &:after,
+  &::before,
+  div {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const NavMobile = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #951717;
+  width: 300px;
+  z-index: 100;
+  list-style: none;
+  padding: 20px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    a {
+      font-weight: 600;
+    }
+  }
+`;
+
+const Container = styled.div`
+  @media (min-width: 768px) {
+    width: 100%;
+    position: fixed;
+    z-index: 90;
+    transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
+    ${({ offset }) =>
+      offset > 10 &&
+      `
     backdrop-filter: saturate(180%) blur(10px);
     background-color: #020000bd;
     transition: background-color 250ms ease-in;
     color: white;
   `}
+  }
 `;
 
 const Wrapper = styled.div`
@@ -75,6 +175,9 @@ const Logo = styled.div`
 `;
 
 const Nav = styled.nav`
+  @media (max-width: 768px) {
+    display: none;
+  }
   a {
     margin-right: 10px;
     margin-left: 10px;

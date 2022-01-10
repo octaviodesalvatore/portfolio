@@ -74,9 +74,9 @@ function ContactMe() {
                 <textarea name="message" />
                 <span>Escribe tu mensaje...</span>
               </InputBox>
-              <InputBox>
+              <Submit>
                 <input type="submit" value="Enviar" />
-              </InputBox>
+              </Submit>
             </form>
           </ContactForm>
         </Content>
@@ -97,6 +97,10 @@ const CenterContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 const CvContainer = styled.div`
   button {
@@ -206,5 +210,13 @@ const InputBox = styled.div`
     background-color: #b61313;
     transition: ease-in-out 150ms all;
     position: relative;
+  }
+`;
+
+const Submit = styled(InputBox)`
+  input {
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
   }
 `;
