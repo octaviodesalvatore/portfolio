@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,7 +9,7 @@ const templateID = process.env.REACT_APP_TEMPLATE_ID;
 const userID = process.env.REACT_APP_USER_ID;
 
 function ContactMe() {
-  // const [toasty, setToasty] = useState();
+  const [toasty, setToasty] = useState();
   const successMessage = (message) =>
     toast.success(message, {
       position: "top-right",
@@ -46,7 +46,7 @@ function ContactMe() {
   };
 
   return (
-    <Fade left>
+    <Fade right>
       <Wrapper id="ContactMe">
         <ToastContainer />
         <CenterContainer>
@@ -65,7 +65,13 @@ function ContactMe() {
                   <span>Nombre completo</span>
                 </InputBox>
                 <InputBox>
-                  <input type="email" name="email" required="required" />
+                  <input
+                    type="text"
+                    name="email"
+                    required="required"
+                    autocomplete="email"
+                    class="email"
+                  />
                   <span>Email</span>
                 </InputBox>
                 <InputBox>
@@ -152,7 +158,6 @@ const ContactForm = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   h3 {
     font-size: 25px;
