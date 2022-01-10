@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Fade from "react-reveal/Fade";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -88,67 +89,69 @@ function Skills() {
   return (
     <BackgroundImage>
       <Container>
-        <Wrapper>
-          <h2>Skills</h2>
-          <Slider {...settings}>
-            <Element>
-              <img src="./img/HTML5.png" alt="HTML Logo" />
-              <h3>HTML</h3>
-            </Element>
-            <Element>
-              <img src="./img/CSS.svg" alt="CSS Logo" />
-              <h3>CSS</h3>
-            </Element>
-            <Element>
-              <img src="./img/JavaScript.svg" alt="JavaScript Logo" />
-              <h3>JavaScript</h3>
-            </Element>
-            <Element>
-              <img src="./img/1280px-React-icon.svg.png" alt="React Logo" />
-              <h3>React JS</h3>
-            </Element>
-            <Element>
-              <img src="./img/material-ui-1.svg" alt="Material UI Logo" />
-              <h3>Material UI</h3>
-            </Element>
-            <Element>
-              <img
-                src="./img/styled-components.svg"
-                alt="Styled Components Logo"
-              />
-              <h3>Styled Components</h3>
-            </Element>
-            <Element>
-              <img src="./img/github-icon.svg" alt="GitHub Logo" />
-              <h3>GitHub</h3>
-            </Element>
-            <Element>
-              <img src="./img/Git_icon.png" alt="Git Logo" />
-              <h3>Git</h3>
-            </Element>
-            <Element>
-              <img
-                src="./img/Adobe_Premiere_Pro_CC_icon.svg.png"
-                alt="Premiere Logo"
-              />
-              <h3>Premiere</h3>
-            </Element>
-            <Element>
-              <img
-                src="./img/Adobe_Illustrator_CC_icon.svg.png"
-                alt="Adobe_Illustrator_CC_icon Logo"
-              />
-              <h3>Illustrator</h3>
-            </Element>
-            <Element>
-              <img
-                src="./img/1051px-Adobe_Photoshop_CC_icon.svg.png"
-                alt="JavaScript Logo"
-              />
-              <h3>Photoshop</h3>
-            </Element>
-          </Slider>
-        </Wrapper>
+        <Fade left>
+          <Wrapper>
+            <h2>Skills</h2>
+            <Slider {...settings}>
+              <Element>
+                <img src="./img/HTML5.png" alt="HTML Logo" />
+                <h3>HTML</h3>
+              </Element>
+              <Element>
+                <img src="./img/CSS.svg" alt="CSS Logo" />
+                <h3>CSS</h3>
+              </Element>
+              <Element>
+                <img src="./img/JavaScript.svg" alt="JavaScript Logo" />
+                <h3>JavaScript</h3>
+              </Element>
+              <Element>
+                <img src="./img/1280px-React-icon.svg.png" alt="React Logo" />
+                <h3>React JS</h3>
+              </Element>
+              <Element>
+                <img src="./img/material-ui-1.svg" alt="Material UI Logo" />
+                <h3>Material UI</h3>
+              </Element>
+              <Element>
+                <img
+                  src="./img/styled-components.svg"
+                  alt="Styled Components Logo"
+                />
+                <h3>Styled Components</h3>
+              </Element>
+              <Element>
+                <img src="./img/github-icon.svg" alt="GitHub Logo" />
+                <h3>GitHub</h3>
+              </Element>
+              <Element>
+                <img src="./img/Git_icon.png" alt="Git Logo" />
+                <h3>Git</h3>
+              </Element>
+              <Element>
+                <img
+                  src="./img/Adobe_Premiere_Pro_CC_icon.svg.png"
+                  alt="Premiere Logo"
+                />
+                <h3>Premiere</h3>
+              </Element>
+              <Element>
+                <img
+                  src="./img/Adobe_Illustrator_CC_icon.svg.png"
+                  alt="Adobe_Illustrator_CC_icon Logo"
+                />
+                <h3>Illustrator</h3>
+              </Element>
+              <Element>
+                <img
+                  src="./img/1051px-Adobe_Photoshop_CC_icon.svg.png"
+                  alt="JavaScript Logo"
+                />
+                <h3>Photoshop</h3>
+              </Element>
+            </Slider>
+          </Wrapper>
+        </Fade>
       </Container>
     </BackgroundImage>
   );

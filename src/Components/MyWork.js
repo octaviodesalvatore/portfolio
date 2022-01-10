@@ -1,78 +1,87 @@
 import React from "react";
 import styled from "styled-components";
 import WorkElement from "./WorkElement";
+import Fade from "react-reveal/Fade";
 
 function MyWork() {
   return (
     <WorkSection id="Projects">
-      <Title>
-        <h2>Mis trabajos</h2>
-      </Title>
-      <WorkContainer>
-        <WorkElement
-          description={
-            "Landing Page Realizada para curso de Le Wagon Argentina"
-          }
-          link={"https://travel-guide-octavio.netlify.app/"}
-          img={"img/work1.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/travel-guide"}
-        />
+      <Fade right>
+        <Title>
+          <h2>Mis trabajos</h2>
+        </Title>
+        <WorkContainer>
+          <WorkElement
+            description={
+              "Landing Page Realizada para curso de Le Wagon Argentina"
+            }
+            link={"https://travel-guide-octavio.netlify.app/"}
+            img={"img/work1.PNG"}
+            GithubLink={"https://github.com/octaviodesalvatore/travel-guide"}
+          />
 
-        <WorkElement
-          description={
-            "Maquetación de la pagina de Spotify para practica personal"
-          }
-          link={"https://octavio-spotify-practica-maquetado.netlify.app/"}
-          img={"img/work2.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/spotify-maquetado"}
-        />
+          <WorkElement
+            description={
+              "Maquetación de la pagina de Spotify para practica personal"
+            }
+            link={"https://octavio-spotify-practica-maquetado.netlify.app/"}
+            img={"img/work2.PNG"}
+            GithubLink={
+              "https://github.com/octaviodesalvatore/spotify-maquetado"
+            }
+          />
 
-        <WorkElement
-          description={"Landing Page realizada para trabajo de la universidad"}
-          link={"https://octavio-cuponcito.netlify.app/"}
-          img={"img/work3.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/Cuponcito"}
-        />
+          <WorkElement
+            description={
+              "Landing Page realizada para trabajo de la universidad"
+            }
+            link={"https://octavio-cuponcito.netlify.app/"}
+            img={"img/work3.PNG"}
+            GithubLink={"https://github.com/octaviodesalvatore/Cuponcito"}
+          />
 
-        <WorkElement
-          description={
-            "Infografía interactiva realiazada para la universidad. Una de mis primeras paginas sin mucho conocimiento de css"
-          }
-          link={"https://energias-renovables.netlify.app/"}
-          img={"img/work4.PNG"}
-          GithubLink={
-            "https://github.com/octaviodesalvatore/Energias-Renovables"
-          }
-        />
+          <WorkElement
+            description={
+              "Infografía interactiva realiazada para la universidad. Una de mis primeras paginas sin mucho conocimiento de css"
+            }
+            link={"https://energias-renovables.netlify.app/"}
+            img={"img/work4.PNG"}
+            GithubLink={
+              "https://github.com/octaviodesalvatore/Energias-Renovables"
+            }
+          />
 
-        <WorkElement
-          description={"Contador de dias para nuevo año"}
-          link={"https://new-years-counter.netlify.app/"}
-          img={"img/work5.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/new-years-counter"}
-        />
+          <WorkElement
+            description={"Contador de dias para nuevo año"}
+            link={"https://new-years-counter.netlify.app/"}
+            img={"img/work5.PNG"}
+            GithubLink={
+              "https://github.com/octaviodesalvatore/new-years-counter"
+            }
+          />
 
-        <WorkElement
-          description={"Juego de preguntas simple"}
-          link={"https://octavio-first-quiz-app.netlify.app/"}
-          img={"img/work6.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/first-quiz-app"}
-        />
+          <WorkElement
+            description={"Juego de preguntas simple"}
+            link={"https://octavio-first-quiz-app.netlify.app/"}
+            img={"img/work6.PNG"}
+            GithubLink={"https://github.com/octaviodesalvatore/first-quiz-app"}
+          />
 
-        <WorkElement
-          description={"Juego realizado con p5.JS para la universidad"}
-          link={"https://cementery-scape.netlify.app/"}
-          img={"img/work7.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/cementery-scape"}
-        />
+          <WorkElement
+            description={"Juego realizado con p5.JS para la universidad"}
+            link={"https://cementery-scape.netlify.app/"}
+            img={"img/work7.PNG"}
+            GithubLink={"https://github.com/octaviodesalvatore/cementery-scape"}
+          />
 
-        <WorkElement
-          description={"Practica de JS"}
-          link={"https://tweet-do.netlify.app/"}
-          img={"img/work8.PNG"}
-          GithubLink={"https://github.com/octaviodesalvatore/tweet-do"}
-        />
-      </WorkContainer>
+          <WorkElement
+            description={"Practica de JS"}
+            link={"https://tweet-do.netlify.app/"}
+            img={"img/work8.PNG"}
+            GithubLink={"https://github.com/octaviodesalvatore/tweet-do"}
+          />
+        </WorkContainer>
+      </Fade>
     </WorkSection>
   );
 }

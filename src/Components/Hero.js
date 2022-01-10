@@ -1,23 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function Hero() {
   return (
-    <BackgroundImg>
-      <Wrapper id="Home">
-        <HeroBox>
-          <h1>¡Hola Mundo!</h1>
-          <p>
-            Soy Desarollador Web, apasionado con lo que hago y siempre queriendo
-            aprender algo nuevo.
-          </p>
-          <img src="./img/image3.svg" alt="Avatar" />
-        </HeroBox>
-        <Image>
-          <img src="./img/undraw_responsive_6c8s.svg" alt="" />
-        </Image>
-      </Wrapper>
-    </BackgroundImg>
+    <Fade left>
+      <BackgroundImg>
+        <Wrapper id="Home">
+          <HeroBox>
+            <h1>¡Hola Mundo!</h1>
+            <p>
+              Soy Desarollador Web, apasionado con lo que hago y siempre
+              queriendo aprender algo nuevo.
+            </p>
+            <img src="./img/image3.svg" alt="Avatar" />
+          </HeroBox>
+          <Image>
+            <img src="./img/undraw_responsive_6c8s.svg" alt="" />
+          </Image>
+        </Wrapper>
+      </BackgroundImg>
+    </Fade>
   );
 }
 
@@ -39,6 +42,26 @@ const HeroBox = styled.div`
   align-items: center;
   text-align: center;
   padding: 4.5rem 1.5rem;
+
+  h1 {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 12ch;
+    animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 
   h1,
   p {

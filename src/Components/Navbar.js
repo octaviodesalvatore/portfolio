@@ -4,17 +4,12 @@ import styled from "styled-components";
 
 function Navbar() {
   const [offset, setOffset] = useState(0);
-
   const [open, setOpen] = useState(false);
-
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset);
     };
   }, []);
-
-  console.log(open);
-
   return (
     <Container offset={offset}>
       <Wrapper>
@@ -22,12 +17,12 @@ function Navbar() {
           <p>octavio.</p>
         </Logo>
         <Nav>
-          <UnderlineRedA offset={offset} href="#home-top">
+          <UnderlineRedA offset={offset}>
             <Link to="Home" spy={true} smooth={true} offset={50} duration={50}>
               Home
             </Link>
           </UnderlineRedA>
-          <UnderlineRedA offset={offset} href="#about-me-section">
+          <UnderlineRedA offset={offset}>
             <Link
               to="AboutMe"
               spy={true}
@@ -38,7 +33,7 @@ function Navbar() {
               Sobre mí
             </Link>
           </UnderlineRedA>
-          <UnderlineRedA offset={offset} href="##my-work">
+          <UnderlineRedA offset={offset}>
             <Link
               to="Projects"
               spy={true}
@@ -49,7 +44,7 @@ function Navbar() {
               Proyectos
             </Link>
           </UnderlineRedA>
-          <ContactMeA offset={offset} href="#contact-me-section">
+          <ContactMeA offset={offset}>
             <Link
               to="ContactMe"
               spy={true}
@@ -69,7 +64,7 @@ function Navbar() {
           <CloseHamburger open={open} onClick={() => setOpen(false)}>
             x
           </CloseHamburger>
-          <MobileLinks offset={offset} href="#home-top">
+          <MobileLinks offset={offset}>
             <Link
               onClick={() => setOpen(false)}
               to="Home"
@@ -81,7 +76,7 @@ function Navbar() {
               Home
             </Link>
           </MobileLinks>
-          <MobileLinks offset={offset} href="#about-me-section">
+          <MobileLinks offset={offset}>
             <Link
               onClick={() => setOpen(false)}
               to="AboutMe"
@@ -93,7 +88,7 @@ function Navbar() {
               Sobre mí
             </Link>
           </MobileLinks>
-          <MobileLinks offset={offset} href="##my-work">
+          <MobileLinks offset={offset}>
             <Link
               onClick={() => setOpen(false)}
               to="Projects"
@@ -105,7 +100,7 @@ function Navbar() {
               Proyectos
             </Link>
           </MobileLinks>
-          <MobileLinks offset={offset} href="#contact-me-section">
+          <MobileLinks offset={offset}>
             <Link
               onClick={() => setOpen(false)}
               to="ContactMe"

@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function AboutMe() {
   return (
-    <Wrapper id="AboutMe">
-      <Container>
-        <h3>Soy Octavio, un gusto en conocerte</h3>
-        <p>
-          Tengo 22 años. Soy estudiante de Lenguaje Multimedial en la Facultad
-          de Artes de La Plata. Me encanta tomar diseños y hacerlos realidad en
-          la Web, puedo estar horas perfeccionando los detalles.
-        </p>
-      </Container>
-    </Wrapper>
+    <Fade right>
+      <Wrapper id="AboutMe">
+        <Container>
+          <h3>Soy Octavio, un gusto en conocerte</h3>
+          <p>
+            Tengo 22 años. Soy estudiante de Lenguaje Multimedial en la Facultad
+            de Artes de La Plata. Me encanta tomar diseños y hacerlos realidad
+            en la Web, puedo estar horas perfeccionando los detalles.
+          </p>
+        </Container>
+      </Wrapper>
+    </Fade>
   );
 }
 

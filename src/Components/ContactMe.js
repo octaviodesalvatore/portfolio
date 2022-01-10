@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Fade from "react-reveal/Fade";
 
 const templateID = process.env.REACT_APP_TEMPLATE_ID;
 const userID = process.env.REACT_APP_USER_ID;
@@ -45,43 +46,45 @@ function ContactMe() {
   };
 
   return (
-    <Wrapper id="ContactMe">
-      <ToastContainer />
-      <CenterContainer>
-        <CvContainer>
-          <a href="./docs/Octavio-De-Salvatore-CV.pdf" download="">
-            <button>Descargar CV</button>
-          </a>
-        </CvContainer>
-        <Content>
-          <h2>Contáctame</h2>
-          <ContactForm>
-            <form onSubmit={sendEmail}>
-              <h3>Enviar un mensaje</h3>
-              <InputBox>
-                <input type="text" name="name" />
-                <span>Nombre completo</span>
-              </InputBox>
-              <InputBox>
-                <input type="email" name="email" />
-                <span>Email</span>
-              </InputBox>
-              <InputBox>
-                <input type="text" name="subject" />
-                <span>Asunto</span>
-              </InputBox>
-              <InputBox>
-                <textarea name="message" />
-                <span>Escribe tu mensaje...</span>
-              </InputBox>
-              <Submit>
-                <input type="submit" value="Enviar" />
-              </Submit>
-            </form>
-          </ContactForm>
-        </Content>
-      </CenterContainer>
-    </Wrapper>
+    <Fade left>
+      <Wrapper id="ContactMe">
+        <ToastContainer />
+        <CenterContainer>
+          <CvContainer>
+            <a href="./docs/Octavio-De-Salvatore-CV.pdf" download="">
+              <button>Descargar CV</button>
+            </a>
+          </CvContainer>
+          <Content>
+            <h2>Contáctame</h2>
+            <ContactForm>
+              <form onSubmit={sendEmail}>
+                <h3>Enviar un mensaje</h3>
+                <InputBox>
+                  <input type="text" name="name" />
+                  <span>Nombre completo</span>
+                </InputBox>
+                <InputBox>
+                  <input type="email" name="email" />
+                  <span>Email</span>
+                </InputBox>
+                <InputBox>
+                  <input type="text" name="subject" />
+                  <span>Asunto</span>
+                </InputBox>
+                <InputBox>
+                  <textarea name="message" />
+                  <span>Escribe tu mensaje...</span>
+                </InputBox>
+                <Submit>
+                  <input type="submit" value="Enviar" />
+                </Submit>
+              </form>
+            </ContactForm>
+          </Content>
+        </CenterContainer>
+      </Wrapper>
+    </Fade>
   );
 }
 
