@@ -9,7 +9,7 @@ function WorkElement({ description, img, link, GithubLink }) {
         <h3>{description}</h3>
         <div className="SpanElementContainer">
           <a href={link} target="”_blank”" rel="noreferrer noopener">
-            <span>Visiatar sitio web</span>
+            <span>Visitar sitio web</span>
           </a>
           <span>
             <a href={GithubLink} target="_blank" rel="noreferrer noopener">
