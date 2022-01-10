@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function AboutMe() {
   return (
-    <Wrapper>
+    <Wrapper id="AboutMe">
       <Container>
         <h3>Soy Octavio, un gusto en conocerte</h3>
         <p>
@@ -23,27 +23,23 @@ const Wrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 100vh; */
   width: 100%;
 `;
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   color: #ffffff;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  width: 85%;
   padding-bottom: 10rem;
   padding-top: 10rem;
-
+  text-align: center;
   h3 {
     font-size: 32px;
     margin-bottom: 1.5rem;
   }
   p {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
   }
 `;

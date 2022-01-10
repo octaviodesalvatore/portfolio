@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Hero() {
   return (
     <BackgroundImg>
-      <Wrapper>
+      <Wrapper id="Home">
         <HeroBox>
           <h1>¡Hola Mundo!</h1>
           <p>

@@ -23,16 +23,42 @@ function Navbar() {
         </Logo>
         <Nav>
           <UnderlineRedA offset={offset} href="#home-top">
-            Home
+            <Link to="Home" spy={true} smooth={true} offset={50} duration={50}>
+              Home
+            </Link>
           </UnderlineRedA>
           <UnderlineRedA offset={offset} href="#about-me-section">
-            About me
+            <Link
+              to="AboutMe"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Sobre mí
+            </Link>
           </UnderlineRedA>
           <UnderlineRedA offset={offset} href="##my-work">
-            Projects
+            <Link
+              to="Projects"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Proyectos
+            </Link>
           </UnderlineRedA>
           <ContactMeA offset={offset} href="#contact-me-section">
-            Contact Me
+            <Link
+              to="ContactMe"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Contáctame
+            </Link>
           </ContactMeA>
         </Nav>
         <Hamburger open={open} onClick={() => setOpen(true)}>
@@ -44,16 +70,52 @@ function Navbar() {
             x
           </CloseHamburger>
           <MobileLinks offset={offset} href="#home-top">
-            Home
+            <Link
+              onClick={() => setOpen(false)}
+              to="Home"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Home
+            </Link>
           </MobileLinks>
           <MobileLinks offset={offset} href="#about-me-section">
-            About me
+            <Link
+              onClick={() => setOpen(false)}
+              to="AboutMe"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Sobre mí
+            </Link>
           </MobileLinks>
           <MobileLinks offset={offset} href="##my-work">
-            Projects
+            <Link
+              onClick={() => setOpen(false)}
+              to="Projects"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Proyectos
+            </Link>
           </MobileLinks>
           <MobileLinks offset={offset} href="#contact-me-section">
-            Contact Me
+            <Link
+              onClick={() => setOpen(false)}
+              to="ContactMe"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={50}
+            >
+              Contáctame
+            </Link>
           </MobileLinks>
         </NavMobile>
       </Wrapper>
@@ -76,6 +138,10 @@ const MobileLinks = styled.a`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: white;
   font-weight: 600;
+
+  a {
+    color: white;
+  }
 `;
 
 const Hamburger = styled.span`
@@ -190,11 +256,14 @@ const ContactMeA = styled.a`
   border-radius: 20px;
   transition: all 250ms ease-in-out;
 
-  ${({ offset }) =>
-    offset > 10 &&
-    `
+  a {
+    font-weight: 500;
+    ${({ offset }) =>
+      offset > 10 &&
+      `
     color: white;
   `}
+  }
 
   &:hover {
     background-color: #951717;
@@ -207,11 +276,16 @@ const UnderlineRedA = styled.a`
   background-color: transparent;
   border-radius: 20px;
   transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
-  ${({ offset }) =>
-    offset > 10 &&
-    `
+
+  a {
+    font-weight: 00;
+    ${({ offset }) =>
+      offset > 10 &&
+      `
     color: white;
+    
   `}
+  }
 
   &::after {
     content: "";

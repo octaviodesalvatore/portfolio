@@ -19,6 +19,7 @@ function SampleNextArrow(props) {
         width: "35px",
         height: "35px",
         right: "25px",
+        zIndex: "1",
       }}
       onClick={onClick}
     />
@@ -40,6 +41,7 @@ function SamplePrevArrow(props) {
         width: "35px",
         height: "35px",
         left: "25px",
+        zIndex: "1",
       }}
       onClick={onClick}
     />

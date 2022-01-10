@@ -4,7 +4,7 @@ import WorkElement from "./WorkElement";
 
 function MyWork() {
   return (
-    <WorkSection>
+    <WorkSection id="Projects">
       <Title>
         <h2>Mis trabajos</h2>
       </Title>
