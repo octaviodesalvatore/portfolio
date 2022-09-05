@@ -13,6 +13,38 @@ function MyWork() {
         <WorkContainer>
           <WorkElement
             description={
+              "Creada con ReactJS para el proyecto final de Coderhouse"
+            }
+            link={"https://skinhub.vercel.app/"}
+            img={"img/work9.png"}
+            GithubLink={"https://github.com/octaviodesalvatore/e-commerce"}
+          />
+
+          <WorkElement
+            description={"Creada con NextJS con PokéAPI (sigue en desarollo)"}
+            link={"https://pokemon-octavio.vercel.app/"}
+            img={"img/work10.png"}
+            GithubLink={"https://github.com/octaviodesalvatore/pokemon-static"}
+          />
+
+          <WorkElement
+            description={"Clone de Tesla - ReactJS"}
+            link={"https://tesla-clone-octavio.vercel.app/"}
+            img={"img/work11.png"}
+            GithubLink={"https://github.com/octaviodesalvatore/tesla-clone"}
+          />
+
+          <WorkElement
+            description={
+              "Clone de Twitter - NextJS Sanity (en desarollo pero funciona los tweets)"
+            }
+            link={"https://twitter-clone-omega-bice.vercel.app/"}
+            img={"img/work12.png"}
+            GithubLink={"https://github.com/octaviodesalvatore/twitter-clone"}
+          />
+
+          <WorkElement
+            description={
               "Landing Page Realizada para curso de Le Wagon Argentina"
             }
             link={"https://travel-guide-octavio.netlify.app/"}

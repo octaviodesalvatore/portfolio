@@ -46,7 +46,7 @@ function ContactMe() {
   };
 
   return (
-    <Fade right>
+    <Fade left>
       <Wrapper id="ContactMe">
         <ToastContainer />
         <CenterContainer>

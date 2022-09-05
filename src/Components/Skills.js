@@ -94,24 +94,16 @@ function Skills() {
             <h2>Skills</h2>
             <Slider {...settings}>
               <Element>
-                <img src="./img/HTML5.png" alt="HTML Logo" />
-                <h3>HTML</h3>
-              </Element>
-              <Element>
-                <img src="./img/CSS.svg" alt="CSS Logo" />
-                <h3>CSS</h3>
-              </Element>
-              <Element>
-                <img src="./img/JavaScript.svg" alt="JavaScript Logo" />
-                <h3>JavaScript</h3>
-              </Element>
-              <Element>
                 <img src="./img/1280px-React-icon.svg.png" alt="React Logo" />
                 <h3>React JS</h3>
               </Element>
               <Element>
-                <img src="./img/material-ui-1.svg" alt="Material UI Logo" />
-                <h3>Material UI</h3>
+                <img src="./img/Typescript_log.svg" alt="TypeScript Logo" />
+                <h3>TypeScript</h3>
+              </Element>
+              <Element>
+                <img src="./img/JavaScript.svg" alt="JavaScript Logo" />
+                <h3>JavaScript</h3>
               </Element>
               <Element>
                 <img
@@ -120,6 +112,20 @@ function Skills() {
                 />
                 <h3>Styled Components</h3>
               </Element>
+              <Element>
+                <img src="./img/HTML5.png" alt="HTML Logo" />
+                <h3>HTML</h3>
+              </Element>
+              <Element>
+                <img src="./img/CSS.svg" alt="CSS Logo" />
+                <h3>CSS</h3>
+              </Element>
+
+              <Element>
+                <img src="./img/material-ui-1.svg" alt="Material UI Logo" />
+                <h3>Material UI</h3>
+              </Element>
+
               <Element>
                 <img src="./img/github-icon.svg" alt="GitHub Logo" />
                 <h3>GitHub</h3>
