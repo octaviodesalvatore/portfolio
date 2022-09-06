@@ -2,17 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
+import { useTranslation } from "react-i18next";
+
 function Hero() {
+  const [t, i18n] = useTranslation("global");
   return (
     <Fade left>
       <BackgroundImg>
         <Wrapper id="Home">
           <HeroBox>
-            <h1>¡Hola Mundo!</h1>
-            <p>
-              Soy Desarollador Web, apasionado con lo que hago y siempre
-              queriendo aprender algo nuevo.
-            </p>
+            <h1>{t("hero.hello-world")}</h1>
+            <p>{t("hero.subtitle")}</p>
             <img src="./img/image3.svg" alt="Avatar" />
           </HeroBox>
           <Image>

@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Fade from "react-reveal/Fade";
 
+import { useTranslation } from "react-i18next";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -50,6 +52,7 @@ function SamplePrevArrow(props) {
 }
 
 function Skills() {
+  const [t, i18n] = useTranslation("global");
   let settings = {
     dots: true,
     infinite: true,
@@ -91,7 +94,7 @@ function Skills() {
       <Container>
         <Fade left>
           <Wrapper>
-            <h2>Skills</h2>
+            <h2>{t("skills.title")}</h2>
             <Slider {...settings}>
               <Element>
                 <img src="./img/1280px-React-icon.svg.png" alt="React Logo" />

@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contáctame"
+  },
+  "hero": {
+    "hello-world": "¡Hola Mundo!",
+    "subtitle": "Soy Desarrollador Web, apasionado con lo que hago y siempre queriendo aprender algo nuevo."
+  },
+  "about-me": {
+    "title": "Soy Octavio, un gusto en conocerte",
+    "description": "Tengo 22 años. Soy estudiante de Lenguaje Multimedial en la Facultad de Artes de La Plata. Me encanta tomar diseños y hacerlos realidad en la Web, puedo estar horas perfeccionando los detalles."
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "my-works": {
+    "title": "Mis trabajos",
+    "d1": "Creada con ReactJS para el proyecto final de Coderhouse",
+    "d2": "Creada con NextJS y PokéAPI (sigue en desarrollo)",
+    "d3": "Clon de Tesla - ReactJS",
+    "d4": "Clon de Twitter - NextJS Sanity (en desarrollo pero funciona los tweets)",
+    "d5": "Landing Page Realizada para curso de Le Wagon Argentina",
+    "d6": "Maquetación de la página de Spotify para practica personal",
+    "d7": "Landing Page realizada para trabajo de la universidad",
+    "d8": "Infografía interactiva realizada para la universidad. Una de mis primeras páginas sin mucho conocimiento de css",
+    "d9": "Contador de dias para nuevo año",
+    "d10": "Juego de preguntas simple",
+    "d11": "Juego realizado con p5.JS para la universidad",
+    "d12": "Practica de JS"
+  },
+  "contact-me": {
+    "title": "Contáctame",
+    "subtitle": "Enviar un mensaje",
+    "ph-name": "Nombre completo",
+    "ph-email": "Email",
+    "ph-subject": "Asunto",
+    "ph-message": "Escribe tu mensaje...",
+    "btn-send": "Enviar",
+    "btn-download-cv": "Descargar CV"
+  }
+}

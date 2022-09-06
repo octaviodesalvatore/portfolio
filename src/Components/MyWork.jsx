@@ -3,59 +3,54 @@ import styled from "styled-components";
 import WorkElement from "./WorkElement";
 import Fade from "react-reveal/Fade";
 
+import { useTranslation } from "react-i18next";
+
 function MyWork() {
+  const [t, i18n] = useTranslation("global");
   return (
     <WorkSection id="Projects">
       <Fade right>
         <Title>
-          <h2>Mis trabajos</h2>
+          <h2>{t("my-works.title")}</h2>
         </Title>
         <WorkContainer>
           <WorkElement
-            description={
-              "Creada con ReactJS para el proyecto final de Coderhouse"
-            }
+            description={t("my-works.d1")}
             link={"https://skinhub.vercel.app/"}
             img={"img/work9.png"}
             GithubLink={"https://github.com/octaviodesalvatore/e-commerce"}
           />
 
           <WorkElement
-            description={"Creada con NextJS con PokéAPI (sigue en desarollo)"}
+            description={t("my-works.d2")}
             link={"https://pokemon-octavio.vercel.app/"}
             img={"img/work10.png"}
             GithubLink={"https://github.com/octaviodesalvatore/pokemon-static"}
           />
 
           <WorkElement
-            description={"Clone de Tesla - ReactJS"}
+            description={t("my-works.d3")}
             link={"https://tesla-clone-octavio.vercel.app/"}
             img={"img/work11.png"}
             GithubLink={"https://github.com/octaviodesalvatore/tesla-clone"}
           />
 
           <WorkElement
-            description={
-              "Clone de Twitter - NextJS Sanity (en desarollo pero funciona los tweets)"
-            }
+            description={t("my-works.d4")}
             link={"https://twitter-clone-omega-bice.vercel.app/"}
             img={"img/work12.png"}
             GithubLink={"https://github.com/octaviodesalvatore/twitter-clone"}
           />
 
           <WorkElement
-            description={
-              "Landing Page Realizada para curso de Le Wagon Argentina"
-            }
+            description={t("my-works.d5")}
             link={"https://travel-guide-octavio.netlify.app/"}
             img={"img/work1.PNG"}
             GithubLink={"https://github.com/octaviodesalvatore/travel-guide"}
           />
 
           <WorkElement
-            description={
-              "Maquetación de la pagina de Spotify para practica personal"
-            }
+            description={t("my-works.d6")}
             link={"https://octavio-spotify-practica-maquetado.netlify.app/"}
             img={"img/work2.PNG"}
             GithubLink={
@@ -64,18 +59,14 @@ function MyWork() {
           />
 
           <WorkElement
-            description={
-              "Landing Page realizada para trabajo de la universidad"
-            }
+            description={t("my-works.d7")}
             link={"https://octavio-cuponcito.netlify.app/"}
             img={"img/work3.PNG"}
             GithubLink={"https://github.com/octaviodesalvatore/Cuponcito"}
           />
 
           <WorkElement
-            description={
-              "Infografía interactiva realiazada para la universidad. Una de mis primeras paginas sin mucho conocimiento de css"
-            }
+            description={t("my-works.d8")}
             link={"https://energias-renovables.netlify.app/"}
             img={"img/work4.PNG"}
             GithubLink={
@@ -83,31 +74,31 @@ function MyWork() {
             }
           />
 
-          <WorkElement
-            description={"Contador de dias para nuevo año"}
+          {/* <WorkElement
+            description={t("my-works.d9")}
             link={"https://new-years-counter.netlify.app/"}
             img={"img/work5.PNG"}
             GithubLink={
               "https://github.com/octaviodesalvatore/new-years-counter"
             }
-          />
+          /> */}
 
           <WorkElement
-            description={"Juego de preguntas simple"}
+            description={t("my-works.d10")}
             link={"https://octavio-first-quiz-app.netlify.app/"}
             img={"img/work6.PNG"}
             GithubLink={"https://github.com/octaviodesalvatore/first-quiz-app"}
           />
 
           <WorkElement
-            description={"Juego realizado con p5.JS para la universidad"}
+            description={t("my-works.d11")}
             link={"https://cementery-scape.netlify.app/"}
             img={"img/work7.PNG"}
             GithubLink={"https://github.com/octaviodesalvatore/cementery-scape"}
           />
 
           <WorkElement
-            description={"Practica de JS"}
+            description={t("my-works.d12")}
             link={"https://tweet-do.netlify.app/"}
             img={"img/work8.PNG"}
             GithubLink={"https://github.com/octaviodesalvatore/tweet-do"}

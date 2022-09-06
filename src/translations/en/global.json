@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact me"
+  },
+  "hero": {
+    "hello-world": "Hello World!",
+    "subtitle": "I am a Web Developer, passionate about what I do and always wanting to learn something new."
+  },
+  "about-me": {
+    "title": "I'm Octavio, nice to meet you",
+    "description": "I'm 22 years old. I am a student of Multimedial Language at the University of Arts La Plata. I love taking designs and making them a reality on the web, I can spend hours perfecting the details."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "my-works": {
+    "title": "My Projects",
+    "d1": "Built with ReactJS for the final Coderhouse project",
+    "d2": "Built with NextJS and PokéAPI (still under development)",
+    "d3": "Tesla Clone - ReactJS",
+    "d4": "Twitter clone - NextJS Sanity (in development but tweets works)",
+    "d5": "Landing Page Made for Le Wagon Argentina course",
+    "d6": "Layout of the Spotify page for personal practice",
+    "d7": "Landing Page made for university work",
+    "d8": "Interactive infographic made for the university. One of my first pages without much knowledge of css",
+    "d9": "Day counter for new year",
+    "d10": "Simple quiz game",
+    "d11": "Game made with p5.JS for the university",
+    "d12": "JS Practice"
+  },
+  "contact-me": {
+    "title": "Contact me",
+    "subtitle": "Send a message",
+    "ph-name": "Full name",
+    "ph-email": "Email",
+    "ph-subject": "Subject",
+    "ph-message": "Write your message...",
+    "btn-send": "Send",
+    "btn-download-cv": "Download CV"
+  }
+}

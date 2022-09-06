@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import { useTranslation } from "react-i18next";
 
 function AboutMe() {
+  const [t, i18n] = useTranslation("global");
   return (
     <Fade right>
       <Wrapper id="AboutMe">
         <Container>
-          <h3>Soy Octavio, un gusto en conocerte</h3>
-          <p>
-            Tengo 22 años. Soy estudiante de Lenguaje Multimedial en la Facultad
-            de Artes de La Plata. Me encanta tomar diseños y hacerlos realidad
-            en la Web, puedo estar horas perfeccionando los detalles.
-          </p>
+          <h3>{t("about-me.title")}</h3>
+          <p>{t("about-me.description")}</p>
         </Container>
       </Wrapper>
     </Fade>

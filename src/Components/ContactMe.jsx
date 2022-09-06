@@ -5,10 +5,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Fade from "react-reveal/Fade";
 
+import { useTranslation } from "react-i18next";
+
 const templateID = process.env.REACT_APP_TEMPLATE_ID;
 const userID = process.env.REACT_APP_USER_ID;
 
 function ContactMe() {
+  const [t, i18n] = useTranslation("global");
+
   const [toasty, setToasty] = useState();
   const successMessage = (message) =>
     toast.success(message, {
@@ -51,18 +55,25 @@ function ContactMe() {
         <ToastContainer />
         <CenterContainer>
           <CvContainer>
-            <a href="./docs/Octavio-De-Salvatore-CV.pdf" download="">
-              <button>Descargar CV</button>
+            <a
+              href={
+                i18n.language === "en"
+                  ? `./docs/Octavio-De-Salvatore-CV_s_english.pdf`
+                  : `./docs/Octavio-De-Salvatore-CV_s.pdf`
+              }
+              download=""
+            >
+              <button>{t("contact-me.btn-download-cv")}</button>
             </a>
           </CvContainer>
           <Content>
-            <h2>Contáctame</h2>
+            <h2>{t("contact-me.title")}</h2>
             <ContactForm>
               <form onSubmit={sendEmail}>
-                <h3>Enviar un mensaje</h3>
+                <h3>{t("contact-me.subtitle")}</h3>
                 <InputBox>
                   <input type="text" name="name" required="required" />
-                  <span>Nombre completo</span>
+                  <span>{t("contact-me.ph-name")}</span>
                 </InputBox>
                 <InputBox>
                   <input
@@ -72,18 +83,18 @@ function ContactMe() {
                     autocomplete="email"
                     class="email"
                   />
-                  <span>Email</span>
+                  <span>{t("contact-me.ph-email")}</span>
                 </InputBox>
                 <InputBox>
                   <input type="text" name="subject" required="required" />
-                  <span>Asunto</span>
+                  <span>{t("contact-me.ph-subject")}</span>
                 </InputBox>
                 <InputBox>
                   <textarea name="message" required="required" />
-                  <span>Escribe tu mensaje...</span>
+                  <span>{t("contact-me.ph-message")}</span>
                 </InputBox>
                 <Submit>
-                  <input type="submit" value="Enviar" />
+                  <input type="submit" value={t("contact-me.btn-send")} />
                 </Submit>
               </form>
             </ContactForm>
